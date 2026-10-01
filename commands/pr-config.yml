@@ -1,0 +1,23 @@
+# .claude/pr-config.yml — PR settings for THIS workspace
+#
+# Each workspace has its own config. There are no per-domain overrides.
+# Commit this file — it contains no secrets.
+#
+# How to find your Slack channel ID:
+#   Right-click the channel in Slack → View channel details → scroll to bottom
+#
+# How to find your Bitbucket workspace slug:
+#   It's the organisation part of your repo URL:
+#   https://bitbucket.org/[WORKSPACE]/repo-name
+
+# Slack channel ID for PR notifications (workspace default)
+slack_channel_id: ""
+
+# Bitbucket workspace slug
+bitbucket_workspace: ""
+
+# Default target branch for all PRs
+default_target_branch: "main"
+
+# Optional: map service folder name -> Bitbucket repo slug when they differ
+repo_name_overrides: {}

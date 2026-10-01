@@ -1,0 +1,34 @@
+# architecture.yml — reusable AI/ML workspace map
+# Run /update-architecture to discover and register this workspace's components.
+# Run /update-context after architecture changes to refresh the root CLAUDE.md.
+
+workspace:
+  name: TODO
+  description: TODO — summarize what this workspace owns
+  boundary_rules: []
+
+global_guardrails:
+  - "Never commit or log credentials or secrets; use the workspace's approved secret-management mechanism"
+  - "Handle datasets, prompts, model artifacts, and logs according to their data classification; avoid exposing sensitive data"
+  - "Review changes to shared code, data schemas, model interfaces, dependencies, and deployment contracts for downstream impact"
+  - "Prefer existing pipelines, models, and utilities over parallel implementations"
+  - "Surface uncertainty, evaluation limits, and incomplete results; do not present unvalidated model outputs as reliable"
+  - "Preserve reproducibility by recording relevant code, configuration, data, and model versions for experiments and deployments"
+
+# Empty by design in this reusable starter. /update-architecture discovers local
+# projects and adds their entries here when run in a target workspace.
+services: {}
+
+shared_infrastructure:
+  databases: []
+  caches: []
+  queues: []
+  data_platforms: []
+  feature_stores: []
+  model_registries: []
+  artifact_stores: []
+
+# Contracts with components and workspaces outside this workspace.
+external:
+  consumed_by: []
+  we_depend_on: []
